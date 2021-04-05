@@ -1,0 +1,54 @@
+<div class="card">
+    <div class="card-header">
+        Product Details {{product.productName}}
+    </div>
+    <div class="card-body row">
+        <ul class="list-group col col-sm-5">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-3">Name</div>
+                    <div class="col col-sm-8">{{product.productName}}</div>
+                </div>         
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-3">code</div>
+                    <div class="col col-sm-8">{{product.productCode}}</div>
+                </div>  
+               
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-3">Description</div>
+                    <div class="col col-sm-8">{{product.description}}</div>
+                </div>       
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-3">Availability</div>
+                    <div class="col col-sm-8">{{product.releaseDate}}</div>
+                </div>             
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-3">Price</div>
+                    <div class="col col-sm-8">{{product.price}}</div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col col-sm-3">Rating</div>
+                    <div class="col col-sm-8">{{product.starRating}}</div>
+                </div>
+            </li>
+        </ul>
+        <div class="col col-sm-auto">
+            <img style="height:300px;width:300px;" [src]="product.imageUrl" [alt]="product.productName">
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-primary" (click)="onBack()">
+            <i class="fa fa-chevron-left"></i>
+            Back</button>
+    </div>
+</div>
